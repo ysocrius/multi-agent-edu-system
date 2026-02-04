@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekalavya Agent - Educational Content Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Ekalavya Agent</h1>
+            <p class="subtitle">AI-Powered Educational Content Generation</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="input-section">
+            <h2>Generate Content</h2>
+            <form id="contentForm">
+                <div class="form-group">
+                    <label for="grade">Grade Level:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="4" selected>Grade 4</option>
+                        <option value="5">Grade 5</option>
+                        <option value="6">Grade 6</option>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic">Topic:</label>
+                    <input type="text" id="topic" name="topic" 
+                           placeholder="e.g., Types of angles" 
+                           required>
+                </div>
+                
+                <button type="submit" id="generateBtn" class="btn-primary">
+                    Generate Content
+                </button>
+            </form>
+        </section>
+
+        <!-- Pipeline Visualization -->
+        <section id="pipelineSection" class="pipeline-section hidden">
+            <h2>Agent Pipeline</h2>
+            
+            <!-- Stage 1: Generator -->
+            <div class="pipeline-stage" id="stage1">
+                <div class="stage-header">
+                    <span class="stage-number">1</span>
+                    <h3>Generator Agent</h3>
+                    <span class="status-badge" id="status1">Pending</span>
+                </div>
+                <div class="stage-content hidden" id="content1">
+                    <h4>Generated Content:</h4>
+                    <div class="explanation-box">
+                        <strong>Explanation:</strong>
+                        <p id="explanation1"></p>
+                    </div>
+                    <div class="mcqs-box">
+                        <strong>Multiple Choice Questions:</strong>
+                        <div id="mcqs1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 2: Reviewer -->
+            <div class="pipeline-stage" id="stage2">
+                <div class="stage-header">
+                    <span class="stage-number">2</span>
+                    <h3>Reviewer Agent</h3>
+                    <span class="status-badge" id="status2">Pending</span>
+                </div>
+                <div class="stage-content hidden" id="content2">
+                    <div class="review-result" id="reviewResult"></div>
+                    <div class="feedback-box hidden" id="feedbackBox">
+                        <strong>Feedback:</strong>
+                        <ul id="feedbackList"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 3: Refinement (conditional) -->
+            <div class="pipeline-stage hidden" id="stage3">
+                <div class="stage-header">
+                    <span class="stage-number">3</span>
+                    <h3>Refinement</h3>
+                    <span class="status-badge" id="status3">Pending</span>
+                </div>
+                <div class="stage-content hidden" id="content3">
+                    <p class="refinement-note">Content refined based on reviewer feedback</p>
+                </div>
+            </div>
+
+            <!-- Final Output -->
+            <div class="final-output hidden" id="finalOutput">
+                <h2>✅ Final Content</h2>
+                <div class="explanation-box">
+                    <strong>Explanation:</strong>
+                    <p id="finalExplanation"></p>
+                </div>
+                <div class="mcqs-box">
+                    <strong>Multiple Choice Questions:</strong>
+                    <div id="finalMcqs"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error Display -->
+        <div id="errorBox" class="error-box hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

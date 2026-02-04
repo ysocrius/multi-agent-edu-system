@@ -46,22 +46,18 @@ htmlcov/
 # Logs
 *.log
 
-# Playwright recordings (optional - keep if you want to share test evidence)
-# *.webp
-# tc*.png
-# tc*.md
+# Project-specific exclusions (non-essential for deployment)
+docs/
+plans/
+rules/
+proj_details/
+submission/
+master_setup.md
+VALIDATION_CHECKLIST.md
+GIT_SUBMISSION_GUIDE.md
+COMMIT_PLAN.md
 
-# Submission folder (optional - can be excluded if submitting via separate method)
-# submission/
-*.swp
-*.swo
-*~
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# OS
-.DS_Store
-Thumbs.db
+# Test artifacts (screenshots from Playwright)
+tc*.png
+tc*.md
+*.webp
