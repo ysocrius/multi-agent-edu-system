@@ -81,6 +81,5 @@ ekalavya_agent/
 ```
 
 ## Documentation
-- [Project Report](docs/PROJECT_REPORT.md)
-- [Interview Q&A](docs/INTERVIEW_QA.md)
-- [Error Solutions](docs/ERROR_SOLUTIONS.md)
+- **[PROJECT_REPORT.md](docs/PROJECT_REPORT.md)** - Complete project overview, architecture decisions, challenges & solutions, and metrics
+- **[ERROR_SOLUTIONS.md](docs/ERROR_SOLUTIONS.md)** - Debugging log with all errors encountered and their solutions
