@@ -47,7 +47,9 @@ htmlcov/
 *.log
 
 # Project-specific exclusions (non-essential for deployment)
-docs/
+docs/INTERVIEW_QA.md
+docs/VIDEO_SCRIPT.md
+docs/TEST_PLAN.md
 plans/
 rules/
 proj_details/
